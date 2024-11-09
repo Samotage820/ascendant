@@ -1,0 +1,545 @@
+[
+    {
+        "name" : "Ares",
+        "role" : "Tank",
+        "complexity" : 1,
+        "tagline" : "Are you not entertained?",
+        "bio" : "Ares is a melee brawler who thrives on riding the thin line between life and death.",
+        "abilities" : [
+            {
+                "name" : "Greatsword",
+                "input" : "[M1]",
+                "desc" : "Cleave with Ares' regular greatsword, dealing medium damage in an arc. Hits reduce Second Wind cooldown."
+            },
+            {
+                "name" : "Cursed Greatsword",
+                "input" : "[M2]",
+                "desc" : "Cleave with Ares' cursed greatsword, dealing high damage in an arc. Hits deal medium self-damage that cannot be healed until cleansed by Second Wind."
+            },
+            {
+                "name" : "Pit Fighter",
+                "input" : "[F]",
+                "desc" : "Grapple an enemy in front of Ares with Machine Precision, turning them into a human shield for a medium duration. Recast to throw the enemy. When the ability ends, slam the enemy into the ground, stunning them for a short duration."
+            },
+            {
+                "name" : "Manifest Echo",
+                "input" : "[E]",
+                "desc" : "Summon an echo at a target location and transfer control to it. Recast at any time to swap locations and control between Ares and the echo. The echo can be destroyed, but heals quickly over time when not taking damage."
+            },
+            {
+                "name" : "Second Wind",
+                "input" : "[SHIFT]",
+                "desc" : "Heal all recent damage dealt to Ares, cleanse all Cursed Greatsword self-damage, and move faster for a short duration."
+            },
+            {
+                "name" : "Action Surge",
+                "input" : "[Q]",
+                "desc" : "Reset all cooldowns and summon an echo that moves and acts with Ares, doubling all attacks. While active, Pit Fighter can grapple two enemies at once, and throw or slam them separately."
+            },
+            {
+                "name" : "Legion of One",
+                "input" : "[X]",
+                "desc" : "<i>\"Who's this handsome devil?\"</i><br /><br />Summon an Ares player from the queue into the game as an allied echo. Both Ares' share a shortened Manifest Echo cooldown, and the ability now causes them to swap locations."
+            }
+        ]
+    },
+    {
+        "name" : "Athena",
+        "role" : "Tank",
+        "complexity" : 1,
+        "tagline" : "This is your second chance. You won't get a third.",
+        "bio" : "Athena is a close-quarters guardian who is at her strongest when she protects her allies.",
+        "abilities" : [
+            {
+                "name" : "Longsword",
+                "input" : "[M1]",
+                "desc" : "Swing Athena's longsword, dealing medium damage in an arc."
+            },
+            {
+                "name" : "Shield",
+                "input" : "[M2]",
+                "desc" : "Raise Athena's shield, blocking incoming damage from the front. With the shield raised, press (M1) to charge a short distance forward, dealing medium damage and stunning enemies for a short duration."
+            },
+            {
+                "name" : "Divine Smite",
+                "input" : "[F]",
+                "desc" : "Imbue Athena's next attack with divine fury. Longsword becomes an overhead strike and gains longer range and increased damage, and Shield gains longer charge distance and increased damage and stun duration. Divine Smite has three charges."
+            },
+            {
+                "name" : "Nature's Wrath",
+                "input" : "[E]",
+                "desc" : "A patch of roots erupt at a target location. Affected enemies are slowed and have reduced attack speed."
+            },
+            {
+                "name" : "Aura of Protection",
+                "input" : "[SHIFT]",
+                "desc" : "Grant nearby allies a shield that blocks incoming damage from the front. If a shield is destroyed, Athena gains a charge of Divine Smite, even if she already has the maximum amount of charges."
+            },
+            {
+                "name" : "Second Chance",
+                "input" : "[Q]",
+                "desc" : "Revive an ally for an empowered final stand. If they get a kill or assist, they remain alive when Second Chance ends. Allies are revived with all cooldowns reset and deal increased damage while active."
+            },
+            {
+                "name" : "Eye of the Maelstrom",
+                "input" : "[X]",
+                "desc" : "<i>\"You know you have wings, right love?\"</i><br /><br />Fuse with Maata Mere, granting Athena flight and a Blood Pool. Downward airborne Shield Charges result in a divebomb, dealing Shield Charge's effects in a wide radius. Damage dealt fills the Blood Pool, which is emptied over time to heal allies affected by Aura of Protection. Nature's Wrath deals low damage over time and adds additional blood to the Blood Pool."
+            }
+        ]
+    },
+    {
+        "name" : "Atlas",
+        "role" : "Tank",
+        "complexity" : 2,
+        "tagline" : "You don't want to be there when I land.",
+        "bio" : "Atlas is a medium-range area denier, denying any area within his fucking sight.",
+        "abilities" : [
+            {
+                "name" : "Monte Carlo",
+                "input" : "[M1]",
+                "desc" : "Fire the Titan's signature auto rifle, dealing low sustained damage. Damage dealt reduces Melee cooldown, and kills and assists instantly reset Melee cooldown."
+            },
+            {
+                "name" : "Grenade",
+                "input" : "[M2]",
+                "desc" : "Throw a grenade matching Atlas' currently selected element.<br /><br /><b>Thermite Grenade (Solar):</b> Deals medium damage over time in a forward line and ignites enemies.<br /><b>Suppression Grenade (Void):</b> Suppresses enemy abilities for a medium duration.<br /><b>Storm Grenade (Arc):</b> Summons a roaming cloud that seeks enemies and emits lightning strikes, periodically dealing medium damage."
+            },
+            {
+                "name" : "Melee ",
+                "input" : "[F]",
+                "desc" : "Use the melee ability matching Atlas' currently selected element.<br /><br /><b>Consecration (Solar):</b> Leap into the air, releasing a wave of fire that ignites enemies. Recast while airborne to slam the ground, detonating burning enemies for medium damage.<br /><b>Shield Throw (Void):</b> Throw a seeking shield that ricochets between enemies, dealing medium damage. Each hit grants Atlas temporary health.<br /><b>Thunderclap (Arc):</b> Hold to charge and release to punch, dealing medium damage in a cone. Damage and range increase the longer Thunderclap is charged, and Atlas gains damage resistance while charging.<br />"
+            },
+            {
+                "name" : "Switch Element",
+                "input" : "[E]",
+                "desc" : "Switch Atlas' current element between Solar, Void, and Arc."
+            },
+            {
+                "name" : "Rally Barricade",
+                "input" : "[SHIFT]",
+                "desc" : "Summon a barricade that blocks damage for a long duration. Allies standing behind the barricade gain increased attack speed."
+            },
+            {
+                "name" : "Super",
+                "input" : "[Q]",
+                "desc" : "Cast the super ability matching Atlas' currently selected element.<br /><br /><b>Burning Maul (Solar):</b> Summon a flaming maul and slam the ground, sending a seeking wave of solar energy forward, dealing high damage and leaving a solar cyclone that deals high damage over time for a medium duration.<br /><b>Ward of Dawn (Void):</b> Summon a void bubble, blocking outside damage and granting allies inside temporary health over time for a long duration.<br /><b>Thundercrash (Arc):</b> Hurtle through the air as a human missile, dealing extreme damage in a medium radius wherever Atlas lands.<br />"
+            },
+            {
+                "name" : "Second Collapse",
+                "input" : "[X]",
+                "desc" : "<i>\"We make our own fate.\"</i><br /><br />The Witness covers the map with Darkness that deals high damage over time. Scattered platforms rise from the ground to escape it. One platforming section leads to Atlas' Ghost; if he reaches it, all allies are granted immunity to Darkness, all dead allies are revived, and all living allies gain a charge that is expended on death to revive them once."
+            }
+        ]
+    },
+    {
+        "name" : "Axel",
+        "role" : "Damage",
+        "complexity" : 1,
+        "tagline" : ". . .",
+        "bio" : "Axel is a hit-and-run assassin who utilizes vehicles to get the drop on enemies.",
+        "abilities" : [
+            {
+                "name" : "Pump Shotgun Mk II",
+                "input" : "[M1]",
+                "desc" : "Fire Axels' pump shotgun in a spread pattern with the potential to deal high damage if all pellets hit."
+            },
+            {
+                "name" : "Heavy Sniper Mk II",
+                "input" : "[M2]",
+                "desc" : "Aim Axels' sniper rifle for increased zoom. Press (M1) while aiming to fire a heavy caliber round, dealing high damage on a headshot."
+            },
+            {
+                "name" : "Golf Club Mk I",
+                "input" : "[F]",
+                "desc" : "<i>\"Fore!\"</i><br /><br />Swing a golf club, dealing low damage and high knockback. Deals increased damage to vehicles."
+            },
+            {
+                "name" : "Call Mechanic",
+                "input" : "[E]",
+                "desc" : "Call Axel's mechanic and select a vehicle. Press [M1] to summon a fast Vortex motorcycle or press [M2] to summon a flying Sparrow helicopter. Both vehicles share the same cooldown and deal ramming damage and knockback that scale with speed."
+            },
+            {
+                "name" : "Pilot",
+                "input" : "[SHIFT]",
+                "desc" : "Mount or dismount any vehicle. Mounting an enemy Axels' vehicle while they are already mounted will hijack their vehicle, stunning them for a short duration."
+            },
+            {
+                "name" : "RC Bandito",
+                "input" : "[Q]",
+                "desc" : "Summon and transfer control to the RC Bandito. Recast to detonate, dealing extreme damage in a small radius."
+            },
+            {
+                "name" : "Call Pegasus",
+                "input" : "[X]",
+                "desc" : "<i>\"We look forward to helping you soon!\"</i><br /><br />Call Pegasus Lifestyle Management and select a vehicle. Press [M1] to summon a Rhino tank, fitted with a 120mm cannon that is slow to turn and fire but deals extreme damage in a small radius. Press [M2] to summon an Avenger VTOL aircraft, loaded with bombs that fall slowly but deal extreme damage in a medium radius."
+            },
+            {
+                "name" : "Madrazo Hit",
+                "input" : "[PASSIVE]",
+                "desc" : "Each minute, Martin Madrazo will mark a new random enemy. Killing this enemy or assisting in the kill generates additional Ultimate charge for Axel. Marked enemies are also notified when the mark is applied."
+            }
+        ]
+    },
+    {
+        "name" : "Broadside",
+        "role" : "Damage",
+        "complexity" : 1,
+        "tagline" : "This galaxy ain't big enough for the two of us.",
+        "bio" : "Deadly. Defective. Betrayed. Broadside is a medium-range bullet hose who rewards accuracy and quick reflexes.",
+        "abilities" : [
+            {
+                "name" : "Enforcer Auto Rifle",
+                "input" : "[M1]",
+                "desc" : "Fire Broadside's enforcer auto rifle, dealing medium sustained damage. Firing builds Heat, which slowly vents over time."
+            },
+            {
+                "name" : "Heatsink Blade",
+                "input" : "[M2]",
+                "desc" : "Eject and throw a gauntlet heatsink blade, venting all Heat and dealing medium damage. The blade deals increased damage based on Heat vented, and ignites enemies at high Heat."
+            },
+            {
+                "name" : "Heatsink Gauntlet",
+                "input" : "[F]",
+                "desc" : "Punch an enemy to vent Heat into them, dealing medium damage and igniting enemies at high Heat."
+            },
+            {
+                "name" : "Smoke Grenade",
+                "input" : "[E]",
+                "desc" : "Throw a smoke grenade, obscuring ally outlines, nametags, and health displays to enemies looking through the smoke. Enemy vision through the smoke becomes grayscale. Allies inside the smoke gain a chance to dodge incoming damage."
+            },
+            {
+                "name" : "Combat Roll",
+                "input" : "[SHIFT]",
+                "desc" : "Dive and roll in any direction, becoming invulnerable during the dive."
+            },
+            {
+                "name" : "Frag",
+                "input" : "[Q]",
+                "desc" : "Execute a target ally. They revive at a nearby location of their choice with full health, reset cooldowns, and Squad Link."
+            },
+            {
+                "name" : "Elin's Prescience",
+                "input" : "[X]",
+                "desc" : "<i>\"She's lost, and confused, and scared. And she needs someone.\"</i><br /><br />A captive Elin spawns in the opposing team's territory and is highlighted for all enemies and anyone with Squad Link. Rescue her to freeze the enemy team in place for a long duration. While active, all abilities and cooldowns are also frozen upon use and triggered immediately when the duration ends."
+            },
+            {
+                "name" : "Squad Link",
+                "input" : "[PASSIVE]",
+                "desc" : "Periodically highlight all enemies with Squad Link through walls."
+            }
+        ]
+    },
+    {
+        "name" : "Lee",
+        "role" : "Damage",
+        "complexity" : 3,
+        "tagline" : "I hope you didn't need that.",
+        "bio" : "Lee is an acrobatic melee assassin who uses her enemies' tactics against them.",
+        "abilities" : [
+            {
+                "name" : "Jagserry",
+                "input" : "[M1]",
+                "desc" : "Swing Lee's jagserry, dealing medium damage in an arc. Swings forward while grounded and downward while airborne. Airborne hits deal massively increased damage."
+            },
+            {
+                "name" : "Silkwire Coil",
+                "input" : "[M2]",
+                "desc" : "Latch onto a point with Lee's silkwire coil. Tap to zip to the point or hold to swing around the point. Silkwire Coil can attach to the environment, players, vehicles, and projectiles."
+            },
+            {
+                "name" : "Dredge",
+                "input" : "[F]",
+                "desc" : "Lee's fox spirit Toland steals from an enemy in melee range, granting a specialized charge of Guide My Hands and putting the enemy's Dredged ability on cooldown."
+            },
+            {
+                "name" : "Guide My Hands",
+                "input" : "[E]",
+                "desc" : "Expend a charge to use an empowered ability based on the enemy the charge was Dredged from. Hold to cycle between charges. Guide My Hands can hold a maximum of three charges.<br /><br /><b>Pit Fighter (Ares):</b> Slamming an enemy deals damage proportional to slam height.<br /><b>Divine Smite (Athena):</b> Divine Smite has even longer range.<br /><b>Shield Throw (Atlas):</b> The shield ricochets additional times.<br /><b>Heavy Sniper Mk II (Axel):</b> Heavy Sniper Mk II has lower zoom and deals increased damage while airborne.<br /><b>Smoke Grenade (Broadside): </b> Additionally gain Squad Link.<br /><b>Guide My Hands (Lee):</b> Steal a random Guide My Hands charge.<br /><b>Kinsect Extract (Lilith):</b> Extract buffs last longer.<br /><b>Wildshape: Eagle (Six):</b> Additionally gain one use of Blazing Revival.<br /><b>Satchel Charge (Cal McLaren):</b> Throw only two charges, but throw them simultaneously.<br /><b>Invisibility (Depthstrider):</b> Become invisible to all enemies.<br /><b>Fear (Halt):</b> Cast twice in quick succession on two enemies.<br /><b>Totem (Rose):</b> Cast as a projectile while airborne. The resulting totem has a larger radius."
+            },
+            {
+                "name" : "Spectral Variance",
+                "input" : "[SHIFT]",
+                "desc" : "Dip into the world of ghosts. Become intangible, gain flight, and pass through walls for a medium duration. Additionally, see enemy spirits through walls."
+            },
+            {
+                "name" : "Load the Cannons",
+                "input" : "[Q]",
+                "desc" : "Pop a flare to begin designating a target path for the Spore House's cannons. Once the cannons are loaded, the Spore House saturates the area with cannonfire, dealing extreme damage and following the path drawn by the flare smoke."
+            },
+            {
+                "name" : "Darkness-Under-Eaves",
+                "input" : "[X]",
+                "desc" : "<i>\"Some things are best forgotten.\"<i><br /><br />Plunge the map into darkness. Allies are granted moth lanterns to see in a larger radius. See enemy spirits through walls while active."
+            }
+        ]
+    },
+    {
+        "name" : "Lilith",
+        "role" : "Damage",
+        "complexity" : 2,
+        "tagline" : "",
+        "bio" : "Lilith is a close-range blademaster who weaves her arsenal into devastating combos.",
+        "abilities" : [
+            {
+                "name" : "Weapon Primary",
+                "input" : "[M1]",
+                "desc" : "<b>Lance:</b> Execute a three-poke combo, dealing medium damage and moving Lilith forward a short distance.<br /><b>Insect Glaive:</b> Execute a combo of low damage slashes that do not impede movement. While airborne, dash forward a medium distance while executing a medium damage windmill attack.<br /><b>Great Sword:</b> Execute a wide sweep, dealing medium damage in an arc."
+            },
+            {
+                "name" : "Weapon Secondary",
+                "input" : "[M2]",
+                "desc" : "<b>Lance:</b> Block incoming damage from the front, then retaliate with a long lunge, dealing damage proportional to the damage blocked.<br /><b>Insect Glaive:</b> Send out a kinsect to extract a buff from an enemy. The buff corresponds to the team role of the target enemy: Tank characters provide knockback resistance, Damage characters provide attack speed, and Support characters provide movement speed. Each buff type can be active simultaneously and is active for a long duration.<br /><b>Great Sword:</b> Hold to wind up a true charged slash. Release at the right moment to deal maximum damage."
+            },
+            {
+                "name" : "Switch Weapon",
+                "input" : "[E]",
+                "desc" : "Cycle between Lilith's equipped weapons chosen at the start of the game."
+            },
+            {
+                "name" : "Weapon Mobility",
+                "input" : "[SHIFT]",
+                "desc" : "<b>Lance:</b> Initiate a running charge with shield up and lance forward. Blocks incoming damage from the front and repeatedly pushes back and deals low damage to skewered enemies.<br /><b>Insect Glaive:</b> Vault into the air. Repeated inputs while airborne allow for several long horizontal dashes.<br /><b>Great Sword:</b> Roll a short distance, becoming invulnerable for a short duration at the beginning of the roll."
+            },
+            {
+                "name" : "Sapphire of the Emperor",
+                "input" : "[Q]",
+                "desc" : "Safi'jiiva appears and drops a mote of destruction at a target location. When it touches the ground, a massive explosion deals high damage over time to all enemies within line-of-sight."
+            },
+            {
+                "name" : "Heaven's Ruin",
+                "input" : "[X]",
+                "desc" : "<i>\"\"</i><br /><br />Nergigante arrives to wreak havoc, attacking both teams. If Nergigante is defeated, all players on the team that dealt the most damage are granted Nergigante Armor, reflecting a portion of melee damage back on attackers and granting a chance to deflect ranged attacks."
+            }
+        ]
+    },
+    {
+        "name" : "Six",
+        "role" : "Damage",
+        "complexity" : 2,
+        "tagline" : "Initiating controlled burn.",
+        "bio" : "Six is a mixed-range shapeshifter who alternates between setting wildfires and transforming into deadly animals to put them out.",
+        "abilities" : [
+            {
+                "name" : "Produce Flame",
+                "input" : "[M1]",
+                "desc" : "Launch a flaming projectile that deals low damage and ignites enemies."
+            },
+            {
+                "name" : "Flaming Sphere",
+                "input" : "[M2]",
+                "desc" : "Send a flaming sphere from Six to a target location, dealing periodic damage and igniting enemies around it. Recast to move the sphere to another location. Flaming Sphere's damage increases the longer it is active."
+            },
+            {
+                "name" : "Wildshape: Bear",
+                "input" : "[F]",
+                "desc" : "Wildshape into animal form for a medium duration. Wildshape has three charges, and can be recast while active to change forms. If he is killed while Wildshape is active, Six reverts to warforged form with the same amount of health he had when Wildshape was activated and loses all Wildshape charges.<br /><br />Wildshape into a bear with lots of health. Press [M1] to maul an enemy, dealing medium damage."
+            },
+            {
+                "name" : "Wildshape: Wolf",
+                "input" : "[E]",
+                "desc" : "Wildshape into animal form for a medium duration. Wildshape has three charges, and can be recast while active to change forms. If he is killed while Wildshape is active, Six reverts to warforged form with the same amount of health he had when Wildshape was activated and loses all Wildshape charges.<br /><br />Wildshape into a fast wolf with average health. Press [M1] to pounce on an enemy, dealing periodic low damage and stunning them for a medium duration."
+            },
+            {
+                "name" : "Wildshape: Eagle",
+                "input" : "[SHIFT]",
+                "desc" : "Wildshape into animal form for a medium duration. Wildshape has three charges, and can be recast while active to change forms. If he is killed while Wildshape is active, Six reverts to warforged form with the same amount of health he had when Wildshape was activated and loses all Wildshape charges.<br /><br />Wildshape into an eagle with low health. Press [M1] to dive toward an enemy, dealing damage proportional to the height of the dive."
+            },
+            {
+                "name" : "Wildfire",
+                "input" : "[Q]",
+                "desc" : "<i>\"Return them to the soil.\"</i><br /><br />Push Six's furnace into overdrive, then detonate all burning enemies, dealing high damage in a medium radius and igniting other enemies. Enemies ignited by the first round of detonations also detonate after a short delay."
+            },
+            {
+                "name" : "Giant Scorpion",
+                "input" : "[X]",
+                "desc" : "Wildshape into a giant flaming scorpion. Press [M1] to grab an enemy in its pincers, and press [M2] to inject the grabbed enemy with flaming poison, dealing high damage over time. The scorpion must be stationary to inject, and its grab can be broken with enough incoming damage."
+            },
+            {
+                "name" : "Blazing Revival",
+                "input" : "[Passive]",
+                "desc" : "Once per life, when Six dies, respawn nearby as a flaming fox spirit with very low health and a Produce Flame attack. Reach Six without dying to revive at full health."
+            },
+            {
+                "name" : "Cauterizing Flames",
+                "input" : "[Passive]",
+                "desc" : "Enemies killed while burning drop a spectral flame that heals Six over time for a short duration when collected."
+            },
+            {
+                "name" : "Arcane Furnace",
+                "input" : "[Passive]",
+                "desc" : "Burning damage dealt to nearby enemies fuels Six's Arcane Furnace. Flaming Sphere consumes fuel while active."
+            }
+        ]
+    },
+    {
+        "name" : "Cal McLaren",
+        "role" : "Support",
+        "complexity" : 2,
+        "tagline" : "Dethstryke, see that building? I don't want to anymore.",
+        "bio" : "Cal McLaren is a close-range pilot and demolitions enthusiast who supports his team by creating alternate pathways and calling in death (and caffeine) from above.",
+        "abilities" : [
+            {
+                "name" : "Satchel Charge",
+                "input" : "[M1][M2]",
+                "desc" : "Press [M1] to throw a satchel charge that sticks to the environment, players, and vehicles. Three charges can be deployed at once. Press [M2] to detonate all active charges, each dealing medium damage and damaging walls in a medium radius."
+            },
+            {
+                "name" : "Pneumatic Hammer",
+                "input" : "[F]",
+                "desc" : "Swing Cal's pneumatic hammer, dealing low damage. Hit damaged walls to smash through them."
+            },
+            {
+                "name" : "Datapad",
+                "input" : "[E]",
+                "desc" : "Access the circling ship's IR camera from Cal's datapad, providing an aerial view of the map. Call in support with further inputs. Both support options share a cooldown.<br /><br />[M1] <b>Lights Out Cannon:</b> Fire a railcannon shot that pierces the environment and players alike, dealing high damage.<br />[M2] <b>Good Bean Resupply:</b> Launch a resupply pod that dispenses freshly-brewed coffee to nearby allies, granting the ability to double jump for a long duration."
+            },
+            {
+                "name" : "Cybernetic Leap",
+                "input" : "[SHIFT]",
+                "desc" : "Leap in the crosshair direction using Cal's Pulp Kitchen cybernetic leg."
+            },
+            {
+                "name" : "High-yield Charge",
+                "input" : "[Q]",
+                "desc" : "<i>\"Enough to level a city block.\"</i><br /><br />Plant a high-yield satchel charge and prime it to detonate. Enemies can find and defuse the charge before it detonates. If the countdown reaches zero, the charge detonates, dealing extreme damage in a huge radius, ignoring all cover. If you can hear the beeping, you're too close."
+            },
+            {
+                "name" : "",
+                "input" : "[X]",
+                "desc" : "<i>\"\"</i><br /><br />Cal compels all players to gaze into the void, calling them to seek new experiences. Each player recieves three timed character-specific bounties. Enemies who fail to complete any bounty lose all ability charges, and allies who complete a bounty have their cooldowns reset. Any player who completes all three bounties recieve an additional charge for all abilities."
+            }
+        ]
+    },
+    {
+        "name" : "Depthstrider",
+        "role" : "Support",
+        "complexity" : 2,
+        "tagline" : "I hope you're watching, my dear.",
+        "bio" : "Depthstrider is a mixed-range symbiote who binds himself to an ally, 'til death do they part.",
+        "abilities" : [
+            {
+                "name" : "Hexblade",
+                "input" : "[M1][M2]",
+                "desc" : "Press [M1] to slash with Depthstrider's Hexblade glaive, and press [M2] to loose an arrow from his Hexblade longbow. Both deal low damage, but glaive attacks are faster and can hit multiple targets."
+            },
+            {
+                "name" : "Hexblade's Curse",
+                "input" : "[F]",
+                "desc" : "Prime an arrow that curses on hit. Arrows aggressively seek the cursed enemy, and glaive hits rend the enemy's spirit, dealing an additional instance of damage. Hexblade's Curse lasts until line-of-sight between Depthstrider and the cursed enemy is broken for a medium duration."
+            },
+            {
+                "name" : "Lover's Empathy",
+                "input" : "[E]",
+                "desc" : "Link with an ally. Incoming damage is split between Depthstrider and the target ally. Damage dealt by the target ally to cursed enemies heals Depthstrider. The link breaks if Depthstrider moves too far from the target ally."
+            },
+            {
+                "name" : "Invisibility",
+                "input" : "[SHIFT]",
+                "desc" : "Depthstrider and any linked allies become invisible to any cursed enemies for a medium duration."
+            },
+            {
+                "name" : "Astral Projection",
+                "input" : "[Q]",
+                "desc" : "Become stationary and meditate, then recast after a short delay to gain flight and become intangible for a medium duration. Allies within a small radius also become intangible and are carried with Depthstrider."
+            },
+            {
+                "name" : "Lover's Vigil",
+                "input" : "[X]",
+                "desc" : "<i>\"You're as beautiful as the day I lost you.\"</i><br /><br />Eleanor Depthstrider manifests on the battlefield. Gain an additional charge of Hexblade's Curse and two extra charges of Lover's Empathy. During Lover's Vigil, Depthstrider can link allies with Lover's Empathy, and both linked allies heal each other when damaging cursed enemies."
+            }
+        ]
+    },
+    {
+        "name" : "Halt",
+        "role" : "Support",
+        "complexity" : 2,
+        "tagline" : "The Ministratum has a vested interest in these events. I'm here to facilitate the outcome.",
+        "bio" : "",
+        "abilities" : [
+            {
+                "name" : "Catapult",
+                "input" : "[M1]",
+                "desc" : "Launch a random small object that deals low damage and pierces one enemy. Hold to upcast, consuming a spell slot to launch a much faster projectile that deals medium damage and knockback."
+            },
+            {
+                "name" : "Portent",
+                "input" : "[M2]",
+                "desc" : "Cast on an ally to cause their next cast of a damaging ability to deal increased damage. Any of the ability's projectiles also gain tracking. Cast on an enemy to cause their next cast of a damaging ability to deal no damage. Portent has two charges."
+            },
+            {
+                "name" : "Earthen Grasp",
+                "input" : "[F]",
+                "desc" : "Expend some of Halt's six spell slots to cast a spell. Only one of each spell can be active simultaneously.<br /><br />Expend two spell slots to raise an earthen hand at a target location. It grabs and squeezes the first enemy that enters its area, dealing medium damage and immobilizing the enemy for a medium duration."
+            },
+            {
+                "name" : "Fear",
+                "input" : "[E]",
+                "desc" : "Expend some of Halt's six spell slots to cast a spell. Only one of each spell can be active simultaneously.<br /><br />Expend three spell slots to strike fear into an enemy for a medium duration. The target takes damage over time that increases over time but decreases if the target moves away from Halt. Halt appears as a nightmare to the affected enemy that is visible through walls."
+            },
+            {
+                "name" : "Polymorph",
+                "input" : "[SHIFT]",
+                "desc" : "Expend some of Halt's six spell slots to cast a spell. Only one of each spell can be active simultaneously.<br /><br />Expend four spell slots to transform an enemy into a chicken for a medium duration. The chicken can tap (SPACE) to flap its wings for limited flight and press (M1) to peck, dealing very low damage. If the chicken takes enough damage, it transforms back early."
+            },
+            {
+                "name" : "Banishment",
+                "input" : "[Q]",
+                "desc" : "Banish an enemy to a demiplane haunted by a nightmare from their past. If they defeat it, they return to the battle at the location they were banished from.<br /><br /><b>Ares:</b> The Unnamed Soldier challenges Ares to a rematch.<br /><b>Athena:</b> The river aboleth tries to drown Athena in the deep.<br /><b>Atlas:</b> The Witness attempts to impose the Final Shape.<br /><b>Axel:</b> Hackers invade Axel's private lobby.<br /><b>Broadside:</b> Mr. Grey crashes a critical solo operation.<br /><b>Lee:</b> Lee's old body comes back to haunt her.<br /><b>Lilith:</b> Blackveil Vaal Hazak chokes the air with effluvium.<br /><b>Six:</b> Memories of war manifest.<br /><b>Cal McLaren:</b> <br /><b>Depthstrider:</b> Apathy goads Depthstrider with a captive Eleanor.<br /><b>Halt:</b> Lolth entombs Halt in a shifting desert ruin.<br /><b>Rose:</b> Thanatos hunts.<br />"
+            },
+            {
+                "name" : "Scrying",
+                "input" : "[X]",
+                "desc" : "<i>\"You can't hide from me.\"</i><br /><br />Become invisible and send Halt's owl familiar flying to an enemy. When it reaches the target, see through its eyes. While the owl orbits an enemy, Halt can cast spells from its location. Recast to send the owl to a new target."
+            },
+            {
+                "name" : "Arcane Recovery",
+                "input" : "[PASSIVE]",
+                "desc" : "Become stationary for a medium duration to meditate and recover all expended spell slots. Heal a small amount for each spell that affected an enemy since Halt's last completed Arcane Recovery."
+            }
+        ]
+    },
+    {
+        "name" : "Rose",
+        "role" : "Support",
+        "complexity" : 3,
+        "tagline" : "Cy would love this.",
+        "bio" : "",
+        "abilities" : [
+            {
+                "name" : "Stygian Spear",
+                "input" : "[M1]",
+                "desc" : "Attack with Rose's Stygian iron coin's spear form, or flip the coin to transform it into a spear. Press again just as Rose catches the coin to make an empowered attack.<br /><br />Rose's mood is influenced by the coin's form: while it is a spear, she is Reaping.<br /><br />Throw a piercing spear that deals low damage and then returns to Rose, dealing damage again on the way back. When empowered, the spear pushes the first enemy hit a short distance. If the enemy impacts a wall, they are stunned for a short duration. If they impact another enemy, both are stunned."
+            },
+            {
+                "name" : "Stygian Shield",
+                "input" : "[M2]",
+                "desc" : "Attack with Rose's Stygian iron coin's shield form, or flip the coin to transform it into a shield. Press again just as Rose catches the coin to make an empowered attack.<br /><br />Rose's mood is influenced by the coin's form: while it is a shield, she is Sowing.<br /><br />Shield bash enemies in front of Rose, dealing low damage and high knockback. When empowered, the bash deals increased knockback at a higher angle and knocks Rose back too."
+            },
+            {
+                "name" : "Totem",
+                "input" : "[E]",
+                "desc" : "While Reaping, send out burrowing skeletons in a line. If they reach an enemy, skeletons burst from the ground and encase them, turning them into an intangible totem and stunning them for a long duration. Half of all damage dealt to allies near the totem is deflected into the encased enemy.<br /><br />While Sowing, send out grasping roots in a line. If they reach an enemy, vines burst from the ground and entangle them, turning them into an intangible totem and stunning them for a long duration. Nearby allies siphon health from the entangled enemy."
+            },
+            {
+                "name" : "Moat",
+                "input" : "[SHIFT]",
+                "desc" : "While Reaping, raise a wall of bones that reach toward nearby enemies and pin them against it, stunning them for a medium duration.<br /><br />While Sowing, raise a wall of brambles that allies can climb and stand on."
+            },
+            {
+                "name" : "Icy Chains",
+                "input" : "[Q]",
+                "desc" : "While Reaping, bind an enemy to Thanatos, who will reap nearby enemies with his scythe, periodically dealing extreme damage for a long duration.<br /><br />While Sowing, bind Rose to Thanatos, preventing allies from dying for a long duration."
+            },
+            {
+                "name" : "Savior of the Broken",
+                "input" : "[X]",
+                "desc" : "<i>\"Your doom arrives. Confront it or perish.\"</i><br /><br />Rose gives her life and ascends to divinity. Become intangible and lose Doomed."
+            },
+            {
+                "name" : "Doomed",
+                "input" : "[PASSIVE]",
+                "desc" : "Reaping abilities build Doom, while Sowing abilities reduce it. Fill the Doom meter to die. When Thanatos appears, cast Icy Chains or Savior of the Broken to stay in the fight."
+            }
+        ]
+    }
+]

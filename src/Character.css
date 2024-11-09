@@ -1,0 +1,42 @@
+.bio {
+  width: 1000px;
+  margin-inline: auto;
+  padding-top: 100px;
+}
+
+.bio div {
+  padding-top: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abilities {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.abilities img {
+  width: 80px;
+  padding-bottom: 10px;
+  padding-inline: 50px;
+}
+
+.abilities div {
+  text-align: center;
+  width: 120px;
+  margin: auto;
+}
+
+.desc {
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+  padding-top: 100px;
+}
