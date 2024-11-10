@@ -8,7 +8,14 @@
   padding-top: 20px;
 }
 
-.row {
+.character-name {
+  font-size: 60px;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bio-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,16 +29,43 @@
   padding-top: 100px;
 }
 
-.abilities img {
-  width: 80px;
-  padding-bottom: 10px;
-  padding-inline: 50px;
+.abilities span {
+  width: 160px;
 }
 
-.abilities div {
-  text-align: center;
-  width: 120px;
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px;
   margin: auto;
+  cursor: pointer;
+}
+
+.circle-unselected {
+  border-color: grey;
+}
+
+.circle-selected {
+  border-color: var(--light);
+}
+
+.ability-text {
+  padding-top: 5px;
+  text-align: center;
+  margin: auto;
+  width: 140px;
+  font-variant: small-caps;
+  cursor: pointer;
+}
+
+.ability-text-unselected {
+  color: grey;
+}
+
+.ability-text-selected {
+  color: var(--light);
 }
 
 .desc {

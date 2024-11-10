@@ -1,5 +1,19 @@
 :root {
-  background-color: #1F1F1F;
-    color: white;
-    font-size: 18px;
+  --dark: #1F1F1F;
+  --light: whitesmoke;
+  /* https://gradient.page/ui-gradients/atlas */
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.ascendant {
+  background-image: linear-gradient(
+    to right,
+    #FEAC5E,#C779D0,#4BC0C8
+  );;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

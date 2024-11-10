@@ -1,6 +1,6 @@
 import './Character.css'
 import { useState } from 'react'
-import circle from './assets/circle.svg'
+import circle from './assets/circle.png'
 import characters from './characters.json'
 import { useParams } from 'react-router-dom'
 
@@ -13,25 +13,27 @@ function getCharacter(name) {
   return characters[0];
 }
 
-export default function CharacterWrapper() {
-  const name = useParams().name;
-  const character = getCharacter(name);
-  return <Character character={character} key={name} />
-}
-
 function Character({ character }) {
-  const [desc, setDesc] = useState("");
-
-  function clickAbility(text) {
-    setDesc(text);
-  }
+  const [selectedAbility, selectAbility] = useState(character.abilities[0]);
 
   function Ability({ ability }) {
+    const style = ability == selectedAbility ? {
+      button : "circle circle-selected",
+      text : "ability-text ability-text-selected"
+    } : {
+      button : "circle circle-unselected",
+      text : "ability-text ability-text-unselected"
+    };
+
+    const ult = ability.input == "[Q]" ? "Ultimate: " : ""
+    const ascendant = ability.input == "[X]" ? "Ascendant: " : ""
+  
     return (
         <span>
-            <img src={circle} alt={ability.name} onClick={() => clickAbility(ability.desc)}/>
-            <div>{ability.input}</div>
-            <div>{ability.name.toUpperCase()}</div>
+            <div tabIndex={0} className={style.button} alt={ability.name} onClick={() => selectAbility(ability)}/>
+            <div className={style.text} onClick={() => selectAbility(ability)}>{ability.input}
+            </div>
+            <div className={style.text} onClick={() => selectAbility(ability)}>{ult}{ascendant}{ability.name}</div>
         </span>
     )
   }
@@ -39,8 +41,8 @@ function Character({ character }) {
   return (
     <>
       <div className="bio">
-        <div class="row">
-          <h1>{character.name.toUpperCase()}</h1>
+        <div className="bio-row">
+          <span className="character-name ascendant">{character.name}</span>
           <span>
             {character.role.toUpperCase()}
             <img src={circle} alt="tank" width="20px" />
@@ -60,11 +62,18 @@ function Character({ character }) {
       <div className="abilities">
         {
           character.abilities.map((ability) => (
-            <Ability ability={ability} />
+            <Ability ability={ability} selectedAbility={selectedAbility} />
           ))
         }
       </div>
-      <p className="desc" dangerouslySetInnerHTML={{ __html: desc }}></p>
+      <p className="desc" dangerouslySetInnerHTML={{ __html: selectedAbility.desc }}></p>
     </>
   )
+}
+
+export default function CharacterWrapper() {
+  /* wrapper only exists to feed a key to Character so its state resets when a new Character is loaded */
+  const name = useParams().name;
+  const character = getCharacter(name);
+  return <Character character={character} key={name} />
 }
