@@ -58,7 +58,7 @@
             {
                 "name" : "Shield",
                 "input" : "[M2]",
-                "desc" : "Raise Athena's shield, blocking incoming damage from the front. With the shield raised, press (M1) to charge a short distance forward, dealing medium damage and stunning enemies for a short duration."
+                "desc" : "Raise Athena's shield, blocking incoming damage from the front. With the shield raised, press [M1] to charge a short distance forward, dealing medium damage and stunning enemies for a short duration."
             },
             {
                 "name" : "Divine Smite",
@@ -146,7 +146,7 @@
             {
                 "name" : "Heavy Sniper Mk II",
                 "input" : "[M2]",
-                "desc" : "Aim Axels' sniper rifle for increased zoom. Press (M1) while aiming to fire a heavy caliber round, dealing high damage on a headshot."
+                "desc" : "Aim Axels' sniper rifle for increased zoom. Press [M1] while aiming to fire a heavy caliber round, dealing high damage on a headshot."
             },
             {
                 "name" : "Golf Club Mk I",
@@ -269,7 +269,7 @@
             {
                 "name" : "Darkness-Under-Eaves",
                 "input" : "[X]",
-                "desc" : "<i>\"Some things are best forgotten.\"<i><br /><br />Plunge the map into darkness. Allies are granted moth lanterns to see in a larger radius. See enemy spirits through walls while active."
+                "desc" : "<i>\"Some things are best forgotten.\"</i><br /><br />Plunge the map into darkness. Allies are granted moth lanterns to see in a larger radius. See enemy spirits through walls while active."
             }
         ]
     },
@@ -352,21 +352,21 @@
             {
                 "name" : "Giant Scorpion",
                 "input" : "[X]",
-                "desc" : "Wildshape into a giant flaming scorpion. Press [M1] to grab an enemy in its pincers, and press [M2] to inject the grabbed enemy with flaming poison, dealing high damage over time. The scorpion must be stationary to inject, and its grab can be broken with enough incoming damage."
+                "desc" : "<i>\"\"</i><br /><br />Wildshape into a giant flaming scorpion. Press [M1] to grab an enemy in its pincers, and press [M2] to inject the grabbed enemy with flaming poison, dealing high damage over time. The scorpion must be stationary to inject, and its grab can be broken with enough incoming damage."
             },
             {
                 "name" : "Blazing Revival",
-                "input" : "[Passive]",
+                "input" : "[PASSIVE]",
                 "desc" : "Once per life, when Six dies, respawn nearby as a flaming fox spirit with very low health and a Produce Flame attack. Reach Six without dying to revive at full health."
             },
             {
                 "name" : "Cauterizing Flames",
-                "input" : "[Passive]",
+                "input" : "[PASSIVE]",
                 "desc" : "Enemies killed while burning drop a spectral flame that heals Six over time for a short duration when collected."
             },
             {
                 "name" : "Arcane Furnace",
-                "input" : "[Passive]",
+                "input" : "[PASSIVE]",
                 "desc" : "Burning damage dealt to nearby enemies fuels Six's Arcane Furnace. Flaming Sphere consumes fuel while active."
             }
         ]
@@ -399,12 +399,12 @@
                 "desc" : "Leap in the crosshair direction using Cal's Pulp Kitchen cybernetic leg."
             },
             {
-                "name" : "High-yield Charge",
+                "name" : "High-Yield Charge",
                 "input" : "[Q]",
                 "desc" : "<i>\"Enough to level a city block.\"</i><br /><br />Plant a high-yield satchel charge and prime it to detonate. Enemies can find and defuse the charge before it detonates. If the countdown reaches zero, the charge detonates, dealing extreme damage in a huge radius, ignoring all cover. If you can hear the beeping, you're too close."
             },
             {
-                "name" : "",
+                "name" : "Prophet of Experience",
                 "input" : "[X]",
                 "desc" : "<i>\"\"</i><br /><br />Cal compels all players to gaze into the void, calling them to seek new experiences. Each player recieves three timed character-specific bounties. Enemies who fail to complete any bounty lose all ability charges, and allies who complete a bounty have their cooldowns reset. Any player who completes all three bounties recieve an additional charge for all abilities."
             }
@@ -479,7 +479,7 @@
             {
                 "name" : "Polymorph",
                 "input" : "[SHIFT]",
-                "desc" : "Expend some of Halt's six spell slots to cast a spell. Only one of each spell can be active simultaneously.<br /><br />Expend four spell slots to transform an enemy into a chicken for a medium duration. The chicken can tap (SPACE) to flap its wings for limited flight and press (M1) to peck, dealing very low damage. If the chicken takes enough damage, it transforms back early."
+                "desc" : "Expend some of Halt's six spell slots to cast a spell. Only one of each spell can be active simultaneously.<br /><br />Expend four spell slots to transform an enemy into a chicken for a medium duration. The chicken can tap (SPACE) to flap its wings for limited flight and press [M1] to peck, dealing very low damage. If the chicken takes enough damage, it transforms back early."
             },
             {
                 "name" : "Banishment",

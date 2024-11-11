@@ -17,7 +17,7 @@ export default function Header() {
     return (
         <>
             <div className="header-row">
-                <span className="title ascendant">ASCENDANT</span>
+                <Link to={"/"} className="title ascendant">ASCENDANT</Link>
                 <span className="header-characters">
                     {characters.map((character) => (
                         <HeaderItem character={character} />

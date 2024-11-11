@@ -1,11 +1,13 @@
-.bio {
+.bio-container {
+  min-height: 200px;
   width: 1000px;
   margin-inline: auto;
-  padding-top: 100px;
+  padding-top: 200px;
+  display: flex;
 }
 
-.bio div {
-  padding-top: 20px;
+.bio {
+  min-width: 800px;
 }
 
 .character-name {
@@ -15,18 +17,23 @@
   font-style: italic;
 }
 
-.bio-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.difficulty {
+  float: right;
+}
+
+.difficulty img {
+  vertical-align: middle;
+  transform: translate(0px, -2px);
+}
+
+.hidden {
+  opacity: 0%;
 }
 
 .abilities {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .abilities span {
@@ -37,8 +44,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border-style: solid;
-  border-width: 4px;
+  border: 4px solid transparent;
   margin: auto;
   cursor: pointer;
 }
@@ -51,12 +57,26 @@
   border-color: var(--light);
 }
 
+.circle-ascendant {
+  background-image: linear-gradient(var(--dark), var(--dark)), var(--ascendant);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
 .ability-text {
   padding-top: 5px;
   text-align: center;
   margin: auto;
   width: 140px;
   font-variant: small-caps;
+  cursor: pointer;
+}
+
+.ability-img {
+  padding-top: 5px;
+  display: block;
+  margin: auto;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -72,5 +92,5 @@
   text-align: center;
   width: 1000px;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 60px;
 }
