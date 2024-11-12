@@ -8,21 +8,49 @@ import tank from './assets/shield.png'
 import support from './assets/collaboration.png'
 import star from './assets/sparkle.png'
 
-import mouse_left from './assets/mouse_left.png'
-import mouse_right from './assets/mouse_right.png'
-import keyboard_f from './assets/keyboard_f.png'
-import keyboard_e from './assets/keyboard_e.png'
-import keyboard_shift from './assets/keyboard_shift.png'
-import keyboard_q from './assets/keyboard_q.png'
-import keyboard_x from './assets/keyboard_x.png'
+// import mouse_left from './assets/mouse_left.png'
+// import mouse_right from './assets/mouse_right.png'
+// import keyboard_f from './assets/keyboard_f.png'
+// import keyboard_e from './assets/keyboard_e.png'
+// import keyboard_shift from './assets/keyboard_shift.png'
+// import keyboard_q from './assets/keyboard_q.png'
+// import keyboard_x from './assets/keyboard_x.png'
 
-import mouse_left_outline from './assets/mouse_left_outline.png'
-import mouse_right_outline from './assets/mouse_right_outline.png'
-import keyboard_f_outline from './assets/keyboard_f_outline.png'
-import keyboard_e_outline from './assets/keyboard_e_outline.png'
-import keyboard_shift_outline from './assets/keyboard_shift_outline.png'
-import keyboard_q_outline from './assets/keyboard_q_outline.png'
-import keyboard_x_outline from './assets/keyboard_x_outline.png'
+// import mouse_left_outline from './assets/mouse_left_outline.png'
+// import mouse_right_outline from './assets/mouse_right_outline.png'
+// import keyboard_f_outline from './assets/keyboard_f_outline.png'
+// import keyboard_e_outline from './assets/keyboard_e_outline.png'
+// import keyboard_shift_outline from './assets/keyboard_shift_outline.png'
+// import keyboard_q_outline from './assets/keyboard_q_outline.png'
+// import keyboard_x_outline from './assets/keyboard_x_outline.png'
+
+const inputMapSelected = {
+  "[M1]" : "mouse_left.png",
+  "[M2]" : "mouse_right.png",
+  "[F]" : "keyboard_f.png",
+  "[E]" : "keyboard_e.png",
+  "[SHIFT]" : "keyboard_shift.png",
+  "[Q]" : "keyboard_q.png",
+  "[X]" : "keyboard_x.png",
+  "[PASSIVE]" : "shield.png",
+}
+
+const inputMapUnselected = {
+  "[M1]" : "mouse_left_outline.png",
+  "[M2]" : "mouse_right_outline.png",
+  "[F]" : "keyboard_f_outline.png",
+  "[E]" : "keyboard_e_outline.png",
+  "[SHIFT]" : "keyboard_shift_outline.png",
+  "[Q]" : "keyboard_q_outline.png",
+  "[X]" : "keyboard_x_outline.png",
+  "[PASSIVE]" : "shield.png",
+}
+
+const roleIconMap = {
+  "Damage" : damage,
+  "Tank" : tank,
+  "Support" : support,
+}
 
 function getCharacter(name) {
   for (const character of characters) {
@@ -33,65 +61,22 @@ function getCharacter(name) {
   return characters[0];
 }
 
-function ReplaceInput({ text, selected }) {
-  if (selected) {
-    return text.split("\[.*\]").map(e => {
-      switch (e) {
-        case ("[M1]"):
-          return <img className="ability-img" src={mouse_left} alt="[M1]" />;
-        case ("[M2]"):
-          return <img className="ability-img" src={mouse_right} alt="[M2]" />;
-        case ("[F]"):
-          return <img className="ability-img" src={keyboard_f} alt="[F]" />;
-        case ("[E]"):
-          return <img className="ability-img" src={keyboard_e} alt="[E]" />;
-        case ("[SHIFT]"):
-          return <img className="ability-img" src={keyboard_shift} alt="[SHIFT]" />;
-        case ("[Q]"):
-          return <img className="ability-img" src={keyboard_q} alt="[Q]" />;
-        case ("[X]"):
-          return <img className="ability-img" src={keyboard_x} alt="[X]" />;
-        case ("[PASSIVE]"):
-          return <img className="ability-img" src={tank} alt="[PASSIVE]" />;
-        default:
-          return e;
-      }
-    });
-  } else {
-    return text.split("\[.*\]").map(e => {
-      switch (e) {
-        case ("[M1]"):
-          return <img className="ability-img" src={mouse_left_outline} alt="[M1]" />;
-        case ("[M2]"):
-          return <img className="ability-img" src={mouse_right_outline} alt="[M2]" />;
-        case ("[F]"):
-          return <img className="ability-img" src={keyboard_f_outline} alt="[F]" />;
-        case ("[E]"):
-          return <img className="ability-img" src={keyboard_e_outline} alt="[E]" />;
-        case ("[SHIFT]"):
-          return <img className="ability-img" src={keyboard_shift_outline} alt="[SHIFT]" />;
-        case ("[Q]"):
-          return <img className="ability-img" src={keyboard_q_outline} alt="[Q]" />;
-        case ("[X]"):
-          return <img className="ability-img" src={keyboard_x_outline} alt="[X]" />;
-        case ("[PASSIVE]"):
-          return <img className="ability-img" src={tank} alt="[PASSIVE]" />;
-        default:
-          return e;
-      }
-    });
-  }
+function ReplaceInput({ text, selected, style }) {
+  const htmlString = text.split(/(\[[A-Z0-9]*\])/).map(e => {
+    if (inputMapSelected[e]) {
+      const src = selected ? inputMapSelected[e] : inputMapUnselected[e];
+      return "<img class='ability-img ability-img-desc' src='/src/assets/" + src + "' alt='" + e + "' />";
+    } else {
+      return e.trim();
+    }
+  }).join('');
+
+  return <p className={style} dangerouslySetInnerHTML={{ __html: htmlString }} />;
 }
 
 function Character({ character }) {
   const [selectedAbility, selectAbility] = useState(character.abilities[0]);
-  
-  var roleIcon;
-  switch (character.role) {
-    case "Damage": roleIcon = damage; break;
-    case "Tank" : roleIcon = tank; break;
-    case "Support" : roleIcon = support; break;
-  };
+  var roleIcon = roleIconMap[character.role];
   const descStyle = selectedAbility.input == "[X]" ? "desc ascendant-italics" : "desc";
 
   function Ability({ ability }) {
@@ -114,7 +99,7 @@ function Character({ character }) {
     return (
         <span>
             <div tabIndex={0} className={style.button} alt={ability.name} onClick={() => selectAbility(ability)}/>
-            <ReplaceInput className={style.text} onClick={() => selectAbility(ability)} text={ability.input} selected={ability == selectedAbility} />
+            <ReplaceInput onClick={() => selectAbility(ability)} text={ability.input} selected={ability == selectedAbility} style={style.text} />
             <div className={style.text} onClick={() => selectAbility(ability)}>{ult}{ascendant}{ability.name}</div>
         </span>
     )
@@ -150,7 +135,7 @@ function Character({ character }) {
           ))
         }
       </div>
-      <p className={descStyle} dangerouslySetInnerHTML={{ __html: selectedAbility.desc }}></p>
+      <ReplaceInput text={selectedAbility.desc} selected={true} style={descStyle}/>
     </>
   )
 }

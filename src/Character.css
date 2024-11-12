@@ -74,10 +74,19 @@
 
 .ability-img {
   padding-top: 5px;
-  display: block;
   margin: auto;
   height: 30px;
   cursor: pointer;
+}
+
+.ability-img-kit {
+  display: block;
+}
+
+.ability-img-desc {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(0px, -4px);
 }
 
 .ability-text-unselected {
