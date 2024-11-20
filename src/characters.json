@@ -5,6 +5,11 @@
         "complexity" : 1,
         "tagline" : "Are you not entertained?",
         "bio" : "Ares is a melee brawler who thrives on riding the thin line between life and death.",
+        "music" : {
+            "title" : "Dead Man Walking",
+            "artist" : "Grant, ellis",
+            "cover" : "dead_man_walking.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Greatsword",
@@ -49,6 +54,11 @@
         "complexity" : 1,
         "tagline" : "This is your second chance. You won't get a third.",
         "bio" : "Athena is a close-quarters guardian who is at her strongest when she protects her allies.",
+        "music" : {
+            "title" : "Star Glide",
+            "artist" : "MUZZ, Cammie Robinson",
+            "cover" : "the_promised_land.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Longsword",
@@ -93,6 +103,11 @@
         "complexity" : 2,
         "tagline" : "You don't want to be there when I land.",
         "bio" : "Atlas is a medium-range area denier, denying any area within his fucking sight.",
+        "music" : {
+            "title" : "Battle Ready",
+            "artist" : "Michael Salvatori, Skye Lewin, Michael Sechrist, Josh Mosser",
+            "cover" : "lightfall.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Monte Carlo",
@@ -137,6 +152,11 @@
         "complexity" : 1,
         "tagline" : ". . .",
         "bio" : "Axel is a hit-and-run assassin who utilizes vehicles to get the drop on enemies.",
+        "music" : {
+            "title" : "Ain't No Rest for the Wicked",
+            "artist" : "Cage The Elephant",
+            "cover" : "cage_the_elephant.webp"
+        },
         "abilities" : [
             {
                 "name" : "Pump Shotgun Mk II",
@@ -186,6 +206,11 @@
         "complexity" : 1,
         "tagline" : "This galaxy ain't big enough for the two of us.",
         "bio" : "Deadly. Defective. Betrayed. Broadside is a medium-range bullet hose who rewards accuracy and quick reflexes.",
+        "music" : {
+            "title" : "Black Magic",
+            "artist" : "Lektrique, Sam Lamar",
+            "cover" : "black_magic.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Enforcer Auto Rifle",
@@ -235,6 +260,11 @@
         "complexity" : 3,
         "tagline" : "I hope you didn't need that.",
         "bio" : "Lee is an acrobatic melee assassin who uses her enemies' tactics against them.",
+        "music" : {
+            "title" : "Greenpath",
+            "artist" : "Christopher Larkin",
+            "cover" : "hollow_knight.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Jagserry",
@@ -279,6 +309,11 @@
         "complexity" : 2,
         "tagline" : "",
         "bio" : "Lilith is a close-range blademaster who weaves her arsenal into devastating combos.",
+        "music" : {
+            "title" : "Proof of a Hero",
+            "artist" : "Zhenlan Kang",
+            "cover" : "monster_hunter_world.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Weapon Primary",
@@ -318,6 +353,11 @@
         "complexity" : 2,
         "tagline" : "Initiating controlled burn.",
         "bio" : "Six is a mixed-range shapeshifter who alternates between setting wildfires and transforming into deadly animals to put them out.",
+        "music" : {
+            "title" : "",
+            "artist" : "",
+            "cover" : ""
+        },
         "abilities" : [
             {
                 "name" : "Produce Flame",
@@ -377,6 +417,11 @@
         "complexity" : 2,
         "tagline" : "Dethstryke, see that building? I don't want to anymore.",
         "bio" : "Cal McLaren is a close-range pilot and demolitions enthusiast who supports his team by creating alternate pathways and calling in death (and caffeine) from above.",
+        "music" : {
+            "title" : "",
+            "artist" : "",
+            "cover" : ""
+        },
         "abilities" : [
             {
                 "name" : "Satchel Charge",
@@ -416,6 +461,11 @@
         "complexity" : 2,
         "tagline" : "I hope you're watching, my dear.",
         "bio" : "Depthstrider is a mixed-range symbiote who binds himself to an ally, 'til death do they part.",
+        "music" : {
+            "title" : "",
+            "artist" : "",
+            "cover" : ""
+        },
         "abilities" : [
             {
                 "name" : "Hexblade",
@@ -455,6 +505,11 @@
         "complexity" : 2,
         "tagline" : "The Ministratum has a vested interest in these events. I'm here to facilitate the outcome.",
         "bio" : "",
+        "music" : {
+            "title" : "",
+            "artist" : "",
+            "cover" : ""
+        },
         "abilities" : [
             {
                 "name" : "Catapult",
@@ -504,6 +559,11 @@
         "complexity" : 3,
         "tagline" : "Cy would love this.",
         "bio" : "",
+        "music" : {
+            "title" : "Could Have Been Me",
+            "artist" : "The Struts",
+            "cover" : "everybody_wants.jpg"
+        },
         "abilities" : [
             {
                 "name" : "Stygian Spear",

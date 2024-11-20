@@ -12,6 +12,11 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .ascendant {
   background: var(--ascendant);
   background-clip: text;
@@ -24,4 +29,13 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
 }

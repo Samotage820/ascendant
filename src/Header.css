@@ -2,21 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
-.title {
+.header-title {
   width: 240px;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
-  /* background-color: whitesmoke; */
 }
 
 .header-characters {
     display: flex;
     justify-content: center;
-    background-color: var(--light);
+    background: linear-gradient(to bottom, var(--light) 50%, grey);
     flex-grow: 1;
+    border-radius: 5px;
 }
 
 a {

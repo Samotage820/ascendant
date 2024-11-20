@@ -3,26 +3,10 @@ import { useState } from 'react'
 import characters from './characters.json'
 import { useParams } from 'react-router-dom'
 
-import damage from './assets/sword.png'
-import tank from './assets/shield.png'
-import support from './assets/collaboration.png'
+import damage from './assets/roles/sword.png'
+import tank from './assets/roles/shield.png'
+import support from './assets/roles/collaboration.png'
 import star from './assets/sparkle.png'
-
-// import mouse_left from './assets/mouse_left.png'
-// import mouse_right from './assets/mouse_right.png'
-// import keyboard_f from './assets/keyboard_f.png'
-// import keyboard_e from './assets/keyboard_e.png'
-// import keyboard_shift from './assets/keyboard_shift.png'
-// import keyboard_q from './assets/keyboard_q.png'
-// import keyboard_x from './assets/keyboard_x.png'
-
-// import mouse_left_outline from './assets/mouse_left_outline.png'
-// import mouse_right_outline from './assets/mouse_right_outline.png'
-// import keyboard_f_outline from './assets/keyboard_f_outline.png'
-// import keyboard_e_outline from './assets/keyboard_e_outline.png'
-// import keyboard_shift_outline from './assets/keyboard_shift_outline.png'
-// import keyboard_q_outline from './assets/keyboard_q_outline.png'
-// import keyboard_x_outline from './assets/keyboard_x_outline.png'
 
 const inputMapSelected = {
   "[M1]" : "mouse_left.png",
@@ -32,7 +16,7 @@ const inputMapSelected = {
   "[SHIFT]" : "keyboard_shift.png",
   "[Q]" : "keyboard_q.png",
   "[X]" : "keyboard_x.png",
-  "[PASSIVE]" : "shield.png",
+  "[PASSIVE]" : "next_solid.png",
 }
 
 const inputMapUnselected = {
@@ -43,7 +27,7 @@ const inputMapUnselected = {
   "[SHIFT]" : "keyboard_shift_outline.png",
   "[Q]" : "keyboard_q_outline.png",
   "[X]" : "keyboard_x_outline.png",
-  "[PASSIVE]" : "shield.png",
+  "[PASSIVE]" : "next.png",
 }
 
 const roleIconMap = {
@@ -65,7 +49,7 @@ function ReplaceInput({ text, selected, style }) {
   const htmlString = text.split(/(\[[A-Z0-9]*\])/).map(e => {
     if (inputMapSelected[e]) {
       const src = selected ? inputMapSelected[e] : inputMapUnselected[e];
-      return "<img class='ability-img ability-img-desc' src='/src/assets/" + src + "' alt='" + e + "' />";
+      return "<img class='ability-img ability-img-desc' src='/src/assets/inputs/" + src + "' alt='" + e + "' />";
     } else {
       return e.trim();
     }
@@ -77,30 +61,35 @@ function ReplaceInput({ text, selected, style }) {
 function Character({ character }) {
   const [selectedAbility, selectAbility] = useState(character.abilities[0]);
   var roleIcon = roleIconMap[character.role];
-  const descStyle = selectedAbility.input == "[X]" ? "desc ascendant-italics" : "desc";
+  const descStyle = selectedAbility.input == "[X]" ? "desc center ascendant-italics" : "desc center";
 
   function Ability({ ability }) {
-    const style = ability == selectedAbility ? {
-      button : "circle circle-selected",
-      text : "ability-text ability-text-selected"
-    } : {
-      button : "circle circle-unselected",
-      text : "ability-text ability-text-unselected"
-    };
+    const [hovered, hoverAbility] = useState(false);
+    const highlight = hovered || ability == selectedAbility;
 
-    const ult = ability.input == "[Q]" ? "Ultimate: " : ""
-    const ascendant = ability.input == "[X]" ? "Ascendant: " : ""
+    var circleStyle = ["circle", "center"];
+    var textStyle = ["ability-text", "center"];
 
-    if (ability == selectedAbility && ability.input == "[X]") {
-      style.text = style.text + " ascendant";
-      style.button = "circle circle-ascendant";
+    if (!highlight) {
+      circleStyle.push("unselected");
+      textStyle.push("unselected");
     }
+
+    if (ability.input == "[X]") {
+      circleStyle.push("circle-ascendant");
+      textStyle.push("ascendant");
+    } else {
+      circleStyle.push("circle-white");
+    }
+
+    const ult = ability.input == "[Q]" ? "Ultimate:\n" : "";
+    const ascendant = ability.input == "[X]" ? "Ascendancy:\n" : "";
   
     return (
-        <span>
-            <div tabIndex={0} className={style.button} alt={ability.name} onClick={() => selectAbility(ability)}/>
-            <ReplaceInput onClick={() => selectAbility(ability)} text={ability.input} selected={ability == selectedAbility} style={style.text} />
-            <div className={style.text} onClick={() => selectAbility(ability)}>{ult}{ascendant}{ability.name}</div>
+        <span className="pointer" onClick={() => selectAbility(ability)} onMouseEnter={() => hoverAbility(true)} onMouseLeave={() => hoverAbility(false)}>
+            <div className={circleStyle.join(' ')} />
+            <ReplaceInput text={ability.input} selected={highlight} style={textStyle.join(' ')} />
+            <div className={textStyle.join(' ')} onClick={() => selectAbility(ability)}>{ult}{ascendant}{ability.name}</div>
         </span>
     )
   }
@@ -108,30 +97,34 @@ function Character({ character }) {
   return (
     <>
       <div className="bio-container">
-        <img src={tank} alt="tank" width="200px" />
+        <img src={tank} alt="tank" height="200px" />
         <div className="bio">
-          <span className="character-name ascendant"><img src={roleIcon} alt="tank" width="40px" />{character.name}</span>
-          <span className="difficulty">
+          <span className="character-name ascendant"><img src={roleIcon} alt="tank" width="35px" />{character.name}</span>
+          <div className="difficulty">
             DIFFICULTY
             {
               [...Array(character.complexity).keys()].map((_, i) => (
-                <img src={star} width="25px" />
+                <img src={star} width="25px" key={i} />
               ))
             }
             {
               [...Array(3 - character.complexity).keys()].map((_, i) => (
-                <img className="hidden" src={star} width="25px" />
+                <img className="more-unselected" src={star} width="25px" key={i} />
               ))
             }
-          </span>
+          </div>
           <p><i>"{character.tagline}"</i></p>
           <p>{character.bio}</p>
+          <div className="music">
+            <img src={"/src/assets/music/" + character.music.cover} width="50px" />
+            <span>{character.music.title}<br />{character.music.artist}</span>
+          </div>
         </div>
       </div>
       <div className="abilities">
         {
           character.abilities.map((ability) => (
-            <Ability ability={ability} selectedAbility={selectedAbility} />
+            <Ability ability={ability} key={ability.name} />
           ))
         }
       </div>
